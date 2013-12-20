@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/Blog/App/Modules/Index/Tpl/public/Css/common.css" />
+	
+	<script type="text/JavaScript" src='/Blog/App/Modules/Index/Tpl/public/Js/jquery-1.7.2.min.js'></script>
+	<script type="text/JavaScript" src='/Blog/App/Modules/Index/Tpl/public/Js/common.js'></script>
+
+
+
+
+
+<link rel="stylesheet" href="/Blog/App/Modules/Index/Tpl/public/Css/show.css" />
+<link rel="stylesheet" href="/Blog/Data/Ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+<script type="text/javascript" src="/Blog/Data/Ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>
+
+	</head>
+<body>
+
+<!--头部-->
+	<div class='top-list-wrap'>
+		<div class='top-list'>
+			<ul class='l-list'>
+				<li><a href="http://www.houdunwang.com" target='_blank'>后盾网</a></li>
+				<li><a href="http://bbs.houdunwang.com" target='_blank'>后盾网论坛</a></li>
+				<li><a href="http://study.houdunwang.com" target='_blank'>后盾学习社区</a></li>
+			</ul>
+			<ul class='r-list'>
+				<li><a href="http://www.hdphp.com" target='_blank'>HDPHP框架</a></li>
+				<li><a href="http://bbs.houdunwang.com" target='_blank'>免费视频教程</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class='top-search-wrap'>
+		<div class='top-search'>
+			<a href="http://bbs.houdunwang.com" target='_blank' class='logo'>
+				<img src="/Blog/App/Modules/Index/Tpl/public/Images/logo.png"/>
+			</a>
+			<div class='search-wrap'>
+				<form action="" method='get'>
+					<input type="text" name='keyword' class='search-content'/>
+					<input type="submit" name='search' value='搜索'/>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class='top-nav-wrap'>
+		<ul class='nav-lv1'>
+			<li class='nav-lv1-li'>
+				<a href="/Blog" class='top-cate'>博客首页</a>
+			</li>
+		
+<!-- 使用自定义标签库来自定义一个nav标签 -->
+						<li class='nav-lv1-li'>
+					<a href="/Blog/c_2" class='top-cate'>DIV+CSS</a>
+					<ul>
+											</ul>
+				</li><li class='nav-lv1-li'>
+					<a href="/Blog/c_3" class='top-cate'>JAVASCRIPT</a>
+					<ul>
+						<li><a href="/Blog/c_8">JQURY</a></li><li><a href="/Blog/c_9">Ajax</a></li>					</ul>
+				</li><li class='nav-lv1-li'>
+					<a href="/Blog/c_4" class='top-cate'>PHP</a>
+					<ul>
+						<li><a href="/Blog/c_10">字符串</a></li><li><a href="/Blog/c_11">数组</a></li><li><a href="/Blog/c_12">对象</a></li>					</ul>
+				</li><li class='nav-lv1-li'>
+					<a href="/Blog/c_5" class='top-cate'>MYSQL</a>
+					<ul>
+						<li><a href="/Blog/c_13">存储引擎</a></li><li><a href="/Blog/c_15">事物视图</a></li><li><a href="/Blog/c_14">存储过程</a></li>					</ul>
+				</li><li class='nav-lv1-li'>
+					<a href="/Blog/c_1" class='top-cate'>HTML</a>
+					<ul>
+											</ul>
+				</li><li class='nav-lv1-li'>
+					<a href="/Blog/c_6" class='top-cate'>LINUX</a>
+					<ul>
+						<li><a href="/Blog/c_17">网络配置</a></li><li><a href="/Blog/c_16">基本命令</a></li>					</ul>
+				</li><li class='nav-lv1-li'>
+					<a href="/Blog/c_7" class='top-cate'>其他</a>
+					<ul>
+											</ul>
+				</li>
+			
+		</ul>
+	</div>
+<!--主体-->
+	<div class='main'>
+		<div class='main-left'>
+			<div class='location'>
+				<a href="/Blog/">首页</a>>
+								<a href="/Blog/c_4">PHP</a>
+							</div>
+			<div class="title">
+				<p>无限级分类</p>
+				<div>
+					<span class='fl'>发布于：2013月08月02日</span>
+					<span class='fr'>已被阅读<script type="text/javascript" src="/Blog/Index/Show/clickNum/id/16"></script>次</span>
+				</div>
+			</div>
+			<div class='content' style='word-break:break-all'>
+				<pre class=\"brush:php;toolbar:false\"><br/></pre><p>&lt;?php<br/>/**<br/>&nbsp;* 无限级分层类<br/>&nbsp;*/<br/>&nbsp;&nbsp; &nbsp;class Category{<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;/**<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; * 一维数组组合的无限级分层<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; *将其子元素调为父元素后面的一个，只是调整了数组的排序<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; */<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Static public function ulimitedForLevel($cate,$html=&#39;--&#39;,$pid=0,$level=0)<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr=array();<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;foreach ($cate as $v ) {<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if($v[&#39;pid&#39;]==$pid)<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$v[&#39;level&#39;]=$level+1;<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$v[&#39;html&#39;]=str_repeat($html, $level);<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr[]=$v;//可以理解为将$v压到数组$arr里面<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr=array_merge($arr,self::ulimitedForLevel($cate,$html,$v[&#39;id&#39;],$level+1));<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return $arr;<br/><br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/><br/><br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;/**<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; * 多维数组组合的无限级分类<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; *将其子类合并成一个数组，当做父栏目的子数组<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; */<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Static public function unlimitedForLayer($cate,$name=&#39;child&#39;,$pid=0)<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr=array();<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;foreach ($cate as $v) {<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if($v[&#39;pid&#39;]==$pid){<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$v[$name]=self::unlimitedForLayer($cate,$name,$v[&#39;id&#39;]);<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr[]=$v;<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return $arr;<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/><br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;/**<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;*传递一个子分类ID，返回所有的父子分类<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; * 查找无限级分类里面一个子节点的所有老爸<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; */<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Static public function getParents($cate,$id)<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr=array();<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;foreach ($cate as $v) {<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if($v[&#39;id&#39;]==$id)<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr[]=$v;<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr=array_merge(self::getParents($cate,$v[&#39;pid&#39;]),$arr);<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return $arr;<br/><br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/><br/><br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;/**<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; * 传递一个父级分类ID，返回所有子分类ID<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; */<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Static public function getChildsId($cate,$pid)<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr=array();<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;foreach ($cate as $v) {<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if($v[&#39;pid&#39;]==$pid)<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr[]=$v[&#39;id&#39;];<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr=array_merge($arr,self::getChilds($cate,$v[&#39;id&#39;]));<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return $arr;<br/><br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/><br/><br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;/**<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; * 传递一个父级分类ID，返回所有子分类<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; */<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Static public function getChilds($cate,$pid)<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr=array();<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;foreach ($cate as $v) {<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if($v[&#39;pid&#39;]==$pid)<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr[]=$v;//把整个$v都压进去<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;$arr=array_merge($arr,self::getChilds($cate,$v[&#39;id&#39;]));<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return $arr;<br/><br/>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br/><br/><br/>&nbsp;&nbsp; &nbsp;}<br/>?&gt;</p>			</div>
+		</div>
+	<!--主体右侧-->
+		<!--主体右侧-->
+		<div class='main-right'>
+		<dl>
+
+				<dt>热门博文</dt>
+				<dd>
+					<a href="/Blog/16"  target="_blank">无限级分类</a>
+					<span>(118)</span>
+				</dd><dd>
+					<a href="/Blog/6"  target="_blank">测试</a>
+					<span>(100)</span>
+				</dd><dd>
+					<a href="/Blog/19"  target="_blank">多维数组</a>
+					<span>(100)</span>
+				</dd><dd>
+					<a href="/Blog/18"  target="_blank">类库一</a>
+					<span>(100)</span>
+				</dd><dd>
+					<a href="/Blog/17"  target="_blank">图像类</a>
+					<span>(100)</span>
+				</dd>
+				
+</dl>			
+		<dl>
+				<dt>最发布发</dt>
+				<dd>
+					<a href="/Blog/20"  target="_blank">linux基本命令</a>
+					<span>(100)</span>
+				</dd><dd>
+					<a href="/Blog/19"  target="_blank">多维数组</a>
+					<span>(100)</span>
+				</dd><dd>
+					<a href="/Blog/18"  target="_blank">类库一</a>
+					<span>(100)</span>
+				</dd><dd>
+					<a href="/Blog/17"  target="_blank">图像类</a>
+					<span>(100)</span>
+				</dd><dd>
+					<a href="/Blog/16"  target="_blank">无限级分类</a>
+					<span>(118)</span>
+				</dd>				
+			</dl>			<dl>
+				<dt>友情连接</dt>
+				<dd>
+					<a href="">后盾网</a>
+				</dd>
+
+				<dd>
+					<a href="">后盾网论坛</a>
+				</dd>
+				<dd>
+					<a href="">后盾网学习社区</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+<!--底部-->
+	<div class='bottom'>
+		<div></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+<?php if (!defined('THINK_PATH')) exit();?>
+<?php if(is_array($mylinks)): foreach($mylinks as $key=>$v): ?><a href="<?php echo ($v["wurl"]); ?>" target='_blank'><?php echo ($v["wname"]); ?></a><?php endforeach; endif; ?>

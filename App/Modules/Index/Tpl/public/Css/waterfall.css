@@ -1,0 +1,33 @@
+
+body{text-align:center;}
+/*Download by http://www.codefans.net*/
+#stage{ margin:0 auto; padding:0; width:880px; }
+#stage li{ margin:0; padding:0; list-style:none;float:left; width:220px;}
+#stage li div{ font-size:12px; padding:10px; color:#999999; text-align:left; }
+.back-to-top {
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	z-index: 150;
+	height: 100%;
+	background: #ff5f3e;
+	color: #fff;
+}
+
+.back-to-top a{
+	display: none;
+	height: 41px;
+	width: 41px;
+	bottom: 50px;
+	right: 0;
+	cursor: pointer;
+	position: absolute;
+	background-color: #ccc;
+	background-position: -43px -268px;
+}
+a{
+	background: url("../images/ued-sprites.png") no-repeat;
+}
+a:hover{
+	background: #ff5f3e;
+}

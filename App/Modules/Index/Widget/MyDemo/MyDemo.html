@@ -1,0 +1,11 @@
+<div class="dropdown" style="float:right;margin-right: 80px;">
+                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Demo<b class="caret"></b></a>
+                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+
+                <foreach name='mydemo' item='v'>
+                  <li role="presentation">
+                  	<a role="menuitem" tabindex="-1" href="{$v.demourl}" style="display: block;" target="_blanks">{$v.demoname}</a>
+                  </li>
+				</foreach>
+                </ul>
+</div>

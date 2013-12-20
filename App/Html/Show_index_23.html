@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/Blog/App/Modules/Index/Tpl/public/Css/common.css" />
+	<link rel="stylesheet" href="/Blog/App/public/css/bootstrap.min.css" />
+	<script type="text/JavaScript" src='/Blog/App/Modules/Index/Tpl/public/Js/jquery-1.7.2.min.js'></script>
+	<script type="text/JavaScript" src='/Blog/App/Modules/Index/Tpl/public/Js/common.js'></script>
+	<script type="text/JavaScript" src='/Blog/App/public/js/bootstrap.min.js'></script>
+	
+
+
+
+<link rel="stylesheet" href="/Blog/App/Modules/Index/Tpl/public/Css/comment.css" />
+<link rel="stylesheet" href="/Blog/App/Modules/Index/Tpl/public/Css/show.css" />
+<link rel="stylesheet" href="/Blog/Data/Ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+<script type="text/javascript" src="/Blog/App/Modules/Index/Tpl/public/Js/comment.js"></script>
+<script type="text/javascript" src="/Blog/Data/Ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+	var handleurl='/Blog/Index/Show/commenthandle';
+</script>
+<script type="text/javascript" src="/Blog/App/Modules/Index/Tpl/public/Js/navi.js">
+</script>
+	</head>
+<body>
+
+<!--头顶部-->
+	<div class='top-list-wrap'>
+		<div  id="menu" style="top: 0px; position: fixed;" class="docked">
+			<a href="">首页</a>
+		<a href="...." target='_blank'>龙门客栈</a><a href="http://localhost:8011/ListenCulture/" target='_blank'>听阅文化</a><a href="http://www.sztechno.com/index.html" target='_blank'>点石成金</a><a href="http://www.momkid.net/index.html" target='_blank'>幼儿园地</a>		<div class="dropdown" style="float:right;margin-right: 80px;">
+                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Demo<b class="caret"></b></a>
+                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+
+                <li role="presentation">
+                  	<a role="menuitem" tabindex="-1" href="#" style="display: block;" target="_blanks">waterfall</a>
+                  </li><li role="presentation">
+                  	<a role="menuitem" tabindex="-1" href="#" style="display: block;" target="_blanks">H</a>
+                  </li><li role="presentation">
+                  	<a role="menuitem" tabindex="-1" href="#" style="display: block;" target="_blanks">photoshow</a>
+                  </li>                </ul>
+</div>		</div>
+	</div>
+
+	<!-- logo部分 -->
+	<div class='top-search-wrap'>
+		<div class='top-search'>
+			<a href="http://bbs.houdunwang.com" target='_blank' class='logo'>
+				<img src="/Blog/App/Modules/Index/Tpl/public/Images/logo.png"/>
+			</a>
+				<img src="/Blog/App/Modules/Index/Tpl/public/Images/header.png" style="height: 80px;" />
+			
+			<div class='search-wrap'>
+				<form action="/Blog/Index/Index/searchhandle" method='post'>
+					<input type="text" name='keyword' class='search-content'/>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class='top-nav-wrap'>
+		<ul class='nav-lv1'>
+			<li class='nav-lv1-li'>
+				<a href="/Blog" class='top-cate'>博客首页</a>
+			</li>
+		
+<!-- 使用自定义标签库来自定义一个nav标签 -->
+						<li class='nav-lv1-li'>
+					<a href="/Blog/c_3" class='top-cate'>JAVASCRIPT</a>
+					<ul>
+						<li><a href="/Blog/c_8">JQURY</a></li><li><a href="/Blog/c_9">Ajax</a></li>					</ul>
+				</li><li class='nav-lv1-li'>
+					<a href="/Blog/c_5" class='top-cate'>MYSQL</a>
+					<ul>
+						<li><a href="/Blog/c_13">存储引擎</a></li><li><a href="/Blog/c_15">事物视图</a></li><li><a href="/Blog/c_14">存储过程</a></li>					</ul>
+				</li><li class='nav-lv1-li'>
+					<a href="/Blog/c_1" class='top-cate'>HTML</a>
+					<ul>
+											</ul>
+				</li><li class='nav-lv1-li'>
+					<a href="/Blog/c_7" class='top-cate'>其他</a>
+					<ul>
+											</ul>
+				</li><li class='nav-lv1-li'>
+					<a href="/Blog/c_2" class='top-cate'>DIV+CSS</a>
+					<ul>
+											</ul>
+				</li>
+			
+		</ul>
+	</div>
+
+
+<!-- 	回到顶部 -->
+<p id="back-to-top" style="display: block;"><a href="#top" data-toggle="tooltip" title="回到顶部"><span></span></a></p>
+<!--主体-->
+	<div class='main'>
+		<div class='main-left'>
+			<div class='location'>
+				<a href="/Blog/">首页</a>>
+								<a href="/Blog/c_2">DIV+CSS</a>
+							</div>
+			<div class="title">
+				<p>叠层样式</p>
+				<div>
+					<span class='fl'>发布于：2013月08月13日</span>
+					<span class='fr'>已被阅读<script type="text/javascript" src="/Blog/Index/Show/clickNum/id/23"></script>次</span>
+				</div>
+			</div>
+			<div class='content' style='word-break:break-all'>
+				<p><img src="/Blog/Uploads/20130813/520a342ee0ae9.jpg" title="免冠照201212.jpg"/></p>			</div>
+		</div>
+		
+	<!--主体右侧-->
+		<!--主体右侧-->
+		<div class='main-right'>
+		<dl>
+
+				<dt>热门点击</dt>
+				<dd>
+					<a href="/Blog/13" >数据库</a>
+					<span>(255)</span>
+				</dd><dd>
+					<a href="/Blog/23" >叠层样式</a>
+					<span>(194)</span>
+				</dd><dd>
+					<a href="/Blog/24" >js异步</a>
+					<span>(114)</span>
+				</dd><dd>
+					<a href="/Blog/25" >ajax</a>
+					<span>(105)</span>
+				</dd>
+				
+</dl>			
+		<dl>
+				<dt>最发布发</dt>
+				<dd>
+					<a href="/Blog/25"  >ajax</a>
+					<span>(105)</span>
+				</dd><dd>
+					<a href="/Blog/24"  >js异步</a>
+					<span>(114)</span>
+				</dd><dd>
+					<a href="/Blog/23"  >叠层样式</a>
+					<span>(194)</span>
+				</dd><dd>
+					<a href="/Blog/13"  >数据库</a>
+					<span>(255)</span>
+				</dd>				
+			</dl>
+		
+
+		</div>
+
+		<div class='main-left' style="margin-top: 20px;">
+			<div class="location">
+				<p>评论墙</p>
+			</div>
+			<div id='main'>
+				
+				<dl class='paper a2'>
+						<dt>
+							<span class='username'>zeelzhang</span>
+							<span class='num'>No.4</span>
+						</dt>
+						<dd class='content'><img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/xixi.gif"/><img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/xixi.gif"/></dd>
+						<dd class='bottom'>
+							<span class='time'>13-Aug-19 17:0</span>
+							<a href="" class='close'></a>
+						</dd>
+					</dl>			</div>
+			<div>
+				<span id='send'>我有话说</span>
+			</div>
+
+			<div id='send-form'>
+				<p class='title'><span>尽情宣泄吧</span><a href="" id='close'></a></p>
+				<form action="" name='wish'>
+					<p>
+						<label for="username">昵称：</label>
+						<input type="text" name='username' id='username'/>
+					</p>
+					<p>
+						<label for="content">内容：(您还可以输入&nbsp;<span id='font-num'>255</span>&nbsp;个字)</label>
+						<textarea name="content" id='content'></textarea>
+						<div id='phiz'>
+							<img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/zhuakuang.gif" alt="抓狂" />
+							<img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/baobao.gif" alt="抱抱" />
+							<img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/haixiu.gif" alt="害羞" />
+							<img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/ku.gif" alt="酷" />
+							<img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/xixi.gif" alt="嘻嘻" />
+							<img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/taikaixin.gif" alt="太开心" />
+							<img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/touxiao.gif" alt="偷笑" />
+							<img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/qian.gif" alt="钱" />
+							<img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/huaxin.gif" alt="花心" />
+							<img src="/Blog/App/Modules/Index/Tpl/public/Images/comment/pic/jiyan.gif" alt="挤眼" />
+						</div>
+					</p>
+					<input type="hidden" name="bid" id="bid" value="23">
+					<span id='send-btn'></span>
+				</form>
+			</div>
+
+		</div>
+	</div>
+<!--底部-->
+	<div class='bottom'>
+
+	<div class='top-list-wrap'>
+		<div  id="bottommenu" >
+				友情连接
+
+		<a href="www.baidu.com" target="_blanks">百度一下</a><a href="http://www.qianduan.net/" target="_blanks">前端观察</a><a href="http://www.szu.edu.cn/szu.asp" target="_blanks">深圳大学内部网</a><a href="http://bbs.houdunwang.com/" target="_blanks">后盾网</a>		</div>
+	</div>
+
+		<div>
+			
+			
+		</div>
+	</div>
+</body>
+</html>

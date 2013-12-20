@@ -1,0 +1,49 @@
+[ 2013-09-12T21:36:38+08:00 ] 127.0.0.1 /Blog/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.014208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014449s ]
+SQL: SHOW COLUMNS FROM `bl_cate` [ RunTime:0.008383s ]
+SQL: SELECT * FROM `bl_cate` WHERE ( `pid` = 0 ) ORDER BY sort  [ RunTime:0.046274s ]
+SQL: SELECT * FROM `bl_cate` ORDER BY sort  [ RunTime:0.000750s ]
+SQL: SHOW COLUMNS FROM `bl_blog` [ RunTime:0.009270s ]
+SQL: SELECT `id`,`title`,`time` FROM `bl_blog` WHERE ( `cid` IN ('8','9','3') ) AND ( `del` = 0 ) ORDER BY time DESC  [ RunTime:0.000577s ]
+SQL: SELECT `id`,`title`,`time` FROM `bl_blog` WHERE ( `cid` IN ('13','15','14','5') ) AND ( `del` = 0 ) ORDER BY time DESC  [ RunTime:0.000522s ]
+SQL: SELECT `id`,`title`,`time` FROM `bl_blog` WHERE ( `cid` IN ('1') ) AND ( `del` = 0 ) ORDER BY time DESC  [ RunTime:0.000466s ]
+SQL: SELECT `id`,`title`,`time` FROM `bl_blog` WHERE ( `cid` IN ('7') ) AND ( `del` = 0 ) ORDER BY time DESC  [ RunTime:0.000226s ]
+SQL: SELECT `id`,`title`,`time` FROM `bl_blog` WHERE ( `cid` IN ('2') ) AND ( `del` = 0 ) ORDER BY time DESC  [ RunTime:0.000366s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in F:\MyAMP\Blog\App\Modules\Index\TagLib\TagLibBl.class.php on line 13 and defined F:\MyAMP\Blog\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag F:\MyAMP\Blog\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:  F:\MyAMP\Blog\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag F:\MyAMP\Blog\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `bl_mylinks` [ RunTime:0.008643s ]
+SQL: SELECT `id`,`wname`,`wurl` FROM `bl_mylinks` ORDER BY time DESC  [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `bl_mydemo` [ RunTime:0.008514s ]
+SQL: SELECT `id`,`demoname`,`demourl` FROM `bl_mydemo` ORDER BY time DESC  [ RunTime:0.000554s ]
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 55 行.
+SQL: SELECT * FROM `bl_cate` ORDER BY sort  [ RunTime:0.000493s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 78 行.
+SQL: SELECT `id`,`title`,`click` FROM `bl_blog` WHERE ( `del` = 0 ) ORDER BY click DESC LIMIT 5   [ RunTime:0.000623s ]
+SQL: SELECT `id`,`title`,`click` FROM `bl_blog` WHERE ( `del` = 0 ) ORDER BY time DESC LIMIT 5   [ RunTime:0.000762s ]
+SQL: SHOW COLUMNS FROM `bl_links` [ RunTime:0.008580s ]
+SQL: SELECT `id`,`wname`,`wurl` FROM `bl_links` ORDER BY time DESC  [ RunTime:0.000447s ]
+INFO: ParseTemplate Behavior ::run [ RunTime:0.467579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.467787s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.005772s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.008669s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001924s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.018562s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.004941s ]
+INFO: [ view_end ] --END-- [ RunTime:0.005104s ]
+

@@ -1,0 +1,58 @@
+<script type="text/javascript" src="__PUBLIC__/Js/navi.js">
+</script>
+	</head>
+<body>
+
+<!--头顶部-->
+	<div class='top-list-wrap'>
+		<div  id="menu" style="top: 0px; position: fixed;" class="docked">
+			<a href="">首页</a>
+		{:W('MyLinks')}
+		{:W('MyDemo')}
+		</div>
+	</div>
+
+	<!-- logo部分 -->
+	<div class='top-search-wrap'>
+		<div class='top-search'>
+			<a href="http://bbs.houdunwang.com" target='_blank' class='logo'>
+				<img src="__PUBLIC__/Images/logo.png"/>
+			</a>
+				<img src="__PUBLIC__/Images/header.png" style="height: 80px;" />
+			
+			<div class='search-wrap'>
+				<form action="{:U(GROUP_NAME.'/Index/searchhandle')}" method='post'>
+					<input type="text" name='keyword' class='search-content'/>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class='top-nav-wrap'>
+		<ul class='nav-lv1'>
+			<li class='nav-lv1-li'>
+				<a href="__GROUP__" class='top-cate'>博客首页</a>
+			</li>
+		
+<!-- 使用自定义标签库来自定义一个nav标签 -->
+			<nav order='sort'>
+				<li class='nav-lv1-li'>
+					<a href="{$url}" class='top-cate'>{$name}</a>
+					<ul>
+						<foreach name='child' item='v'>
+							<li><a href="{:U('/c_'.$v['id'])}">{$v.name}</a></li>
+						</foreach>
+					</ul>
+				</li>
+			</nav>
+
+			
+		</ul>
+	</div>
+
+
+<!-- 	回到顶部 -->
+<p id="back-to-top" style="display: block;"><a href="#top" data-toggle="tooltip" title="回到顶部"><span></span></a></p>

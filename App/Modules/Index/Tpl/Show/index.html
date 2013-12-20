@@ -1,0 +1,95 @@
+<include file='Common:header'/>
+
+
+<link rel="stylesheet" href="__PUBLIC__/Css/comment.css" />
+<link rel="stylesheet" href="__PUBLIC__/Css/show.css" />
+<link rel="stylesheet" href="__ROOT__/Data/Ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+<js file='__PUBLIC__/Js/comment.js'/>
+<js file='__ROOT__/Data/Ueditor/third-party/SyntaxHighlighter/shCore.js'/>
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+	var handleurl='{:U("Index/Show/commenthandle",'','')}';
+</script>
+<include file='Common:navi'/>
+<!--主体-->
+	<div class='main'>
+		<div class='main-left'>
+			<div class='location'>
+				<a href="{:U('/')}">首页</a>>
+				<php>$last=count($parent)-1;</php>
+				<foreach name='parent' item='v'>
+				<a href="{:U('/c_'.$v['id'])}">{$v.name}</a>
+				<if condition='$key neq $last'>></if>
+				</foreach>
+			</div>
+			<div class="title">
+				<p>{$blog.title}</p>
+				<div>
+					<span class='fl'>发布于：{$blog.time|date='Y月m月d日',###}</span>
+					<span class='fr'>已被阅读<script type="text/javascript" src="{:U(GROUP_NAME.'/Show/clickNum',array('id'=>$blog["id"]))}"></script>次</span>
+				</div>
+			</div>
+			<div class='content' style='word-break:break-all'>
+				{$blog.content}
+			</div>
+		</div>
+		
+	<!--主体右侧-->
+		<include file='Common:right'/>
+
+		<div class='main-left' style="margin-top: 20px;">
+			<div class="location">
+				<p>评论墙</p>
+			</div>
+			<div id='main'>
+				
+				<foreach name='comment' item='v'>
+					<dl class='paper a{:mt_rand(1,5)}'>
+						<dt>
+							<span class='username'>{$v.user}</span>
+							<span class='num'>No.{$v.id}</span>
+						</dt>
+						<dd class='content'>{$v.comment|replace_pic=###}</dd>
+						<dd class='bottom'>
+							<span class='time'>{$v.time|date='y-M-d H:I',###}</span>
+							<a href="" class='close'></a>
+						</dd>
+					</dl>
+				</foreach>
+			</div>
+			<div>
+				<span id='send'>我有话说</span>
+			</div>
+
+			<div id='send-form'>
+				<p class='title'><span>尽情宣泄吧</span><a href="" id='close'></a></p>
+				<form action="" name='wish'>
+					<p>
+						<label for="username">昵称：</label>
+						<input type="text" name='username' id='username'/>
+					</p>
+					<p>
+						<label for="content">内容：(您还可以输入&nbsp;<span id='font-num'>255</span>&nbsp;个字)</label>
+						<textarea name="content" id='content'></textarea>
+						<div id='phiz'>
+							<img src="__PUBLIC__/Images/comment/pic/zhuakuang.gif" alt="抓狂" />
+							<img src="__PUBLIC__/Images/comment/pic/baobao.gif" alt="抱抱" />
+							<img src="__PUBLIC__/Images/comment/pic/haixiu.gif" alt="害羞" />
+							<img src="__PUBLIC__/Images/comment/pic/ku.gif" alt="酷" />
+							<img src="__PUBLIC__/Images/comment/pic/xixi.gif" alt="嘻嘻" />
+							<img src="__PUBLIC__/Images/comment/pic/taikaixin.gif" alt="太开心" />
+							<img src="__PUBLIC__/Images/comment/pic/touxiao.gif" alt="偷笑" />
+							<img src="__PUBLIC__/Images/comment/pic/qian.gif" alt="钱" />
+							<img src="__PUBLIC__/Images/comment/pic/huaxin.gif" alt="花心" />
+							<img src="__PUBLIC__/Images/comment/pic/jiyan.gif" alt="挤眼" />
+						</div>
+					</p>
+					<input type="hidden" name="bid" id="bid" value="{$blog.id}">
+					<span id='send-btn'></span>
+				</form>
+			</div>
+
+		</div>
+	</div>
+<!--底部-->
+	<include file='Common:bottom'/>

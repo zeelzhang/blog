@@ -1,0 +1,51 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>瀑布流</title>
+
+
+<script type="text/JavaScript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
+
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Css/waterfall.css" />
+<script type="text/javascript" language="javascript" src="__PUBLIC__/Js/waterfall.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+//首先将#back-to-top隐藏
+ $("#back-to-top").hide();
+//当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+$(function () {
+$(window).scroll(function(){
+if ($(window).scrollTop()>100){
+$("#back-to-top").fadeIn(1500);
+}
+else
+{
+$("#back-to-top").fadeOut(1500);
+}
+});
+//当点击跳转链接后，回到页面顶部位置
+$("#back-to-top").click(function(){
+$('body,html').animate({scrollTop:0},800);
+return false;
+});
+});
+});
+</script>
+
+</head>
+
+<body id="top">
+
+	<ul id="stage">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+<div class="back-to-top">
+<a id="back-to-top" class="sprites bg-anim" href="#top" style="display: inline;"></a>
+</div>
+</body>
+</html>

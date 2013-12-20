@@ -1,0 +1,128 @@
+[ 2013-08-23T12:05:09+08:00 ] 127.0.0.1 /blog/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003057s ]
+SQL: SHOW COLUMNS FROM `bl_cate` [ RunTime:0.025997s ]
+SQL: SELECT * FROM `bl_cate` WHERE ( `pid` = 0 ) ORDER BY sort  [ RunTime:0.000595s ]
+SQL: SELECT * FROM `bl_cate` ORDER BY sort  [ RunTime:0.000592s ]
+SQL: SHOW COLUMNS FROM `bl_blog` [ RunTime:0.022469s ]
+SQL: SELECT `id`,`title`,`time` FROM `bl_blog` WHERE ( `cid` IN ('8','9','3') ) AND ( `del` = 0 ) ORDER BY time DESC  [ RunTime:0.001018s ]
+SQL: SELECT `id`,`title`,`time` FROM `bl_blog` WHERE ( `cid` IN ('13','15','14','5') ) AND ( `del` = 0 ) ORDER BY time DESC  [ RunTime:0.000899s ]
+SQL: SELECT `id`,`title`,`time` FROM `bl_blog` WHERE ( `cid` IN ('1') ) AND ( `del` = 0 ) ORDER BY time DESC  [ RunTime:0.000325s ]
+SQL: SELECT `id`,`title`,`time` FROM `bl_blog` WHERE ( `cid` IN ('7') ) AND ( `del` = 0 ) ORDER BY time DESC  [ RunTime:0.000197s ]
+SQL: SELECT `id`,`title`,`time` FROM `bl_blog` WHERE ( `cid` IN ('2') ) AND ( `del` = 0 ) ORDER BY time DESC  [ RunTime:0.000178s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] Missing argument 2 for TagLib::parseXmlAttr(), called in F:\MyAMP\Blog\App\Modules\Index\TagLib\TagLibBl.class.php on line 13 and defined F:\MyAMP\Blog\ThinkPHP\Lib\Template\TagLib.class.php 第 80 行.
+NOTIC: [8] Undefined variable: tag F:\MyAMP\Blog\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined index:   F:\MyAMP\Blog\ThinkPHP\Lib\Template\TagLib.class.php 第 91 行.
+NOTIC: [8] Undefined variable: tag F:\MyAMP\Blog\ThinkPHP\Lib\Template\TagLib.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `bl_mylinks` [ RunTime:0.022494s ]
+SQL: SELECT `id`,`wname`,`wurl` FROM `bl_mylinks` ORDER BY time DESC  [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `bl_mydemo` [ RunTime:0.018813s ]
+SQL: SELECT `id`,`demoname`,`demourl` FROM `bl_mydemo` ORDER BY time DESC  [ RunTime:0.000499s ]
+NOTIC: [8] Use of undefined constant sort - assumed 'sort' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 55 行.
+SQL: SELECT * FROM `bl_cate` ORDER BY sort  [ RunTime:0.000708s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 78 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 76 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\MyAMP\Blog\App\Runtime\Cache\Index\a2035b5f40cb4c634ca544f2d3fdbc07.php 第 78 行.
+SQL: SELECT `id`,`title`,`click` FROM `bl_blog` WHERE ( `del` = 0 ) ORDER BY click DESC LIMIT 5   [ RunTime:0.000529s ]
+SQL: SELECT `id`,`title`,`click` FROM `bl_blog` WHERE ( `del` = 0 ) ORDER BY time DESC LIMIT 5   [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `bl_links` [ RunTime:0.021923s ]
+SQL: SELECT `id`,`wname`,`wurl` FROM `bl_links` ORDER BY time DESC  [ RunTime:0.000501s ]
+INFO: ParseTemplate Behavior ::run [ RunTime:0.256383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.256550s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.018283s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.002425s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001445s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001807s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.024307s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.012586s ]
+INFO: [ view_end ] --END-- [ RunTime:0.012755s ]
+
+[ 2013-08-23T12:05:42+08:00 ] 127.0.0.1 /blog/Water/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.055227s ]
+INFO: [ route_check ] --END-- [ RunTime:0.055432s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001825s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.027227s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027433s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000992s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001464s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001210s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005480s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002338s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002506s ]
+
+[ 2013-08-23T12:05:42+08:00 ] 127.0.0.1 /Blog/Index/Water/load
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002557s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002801s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001827s ]
+SQL: SHOW COLUMNS FROM `bl_water_content` [ RunTime:0.047164s ]
+SQL: SELECT `image`,`title` FROM `bl_water_content`  [ RunTime:0.000564s ]
+
+[ 2013-08-23T15:36:24+08:00 ] 127.0.0.1 /Blog/Admin
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003144s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003363s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003051s ]
+ERR: 无法加载模块:Admin
+
+[ 2013-08-23T15:36:28+08:00 ] 127.0.0.1 /Blog/masterZeel
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001281s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001428s ]
+
+[ 2013-08-23T15:36:28+08:00 ] 127.0.0.1 /Blog/masterZeel/Login/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001319s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001469s ]
+
+[ 2013-08-23T15:36:29+08:00 ] 127.0.0.1 /Blog/masterZeel/Login/verify
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001312s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001471s ]
+
+[ 2013-08-23T15:36:34+08:00 ] 127.0.0.1 /Blog/masterZeel/Login/login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001252s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001383s ]
+
+[ 2013-08-23T15:36:34+08:00 ] 127.0.0.1 /Blog/masterZeel
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001226s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001362s ]
+
+[ 2013-08-23T15:36:34+08:00 ] 127.0.0.1 /Blog/masterZeel/Blog/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001357s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001514s ]
+
+[ 2013-08-23T15:36:34+08:00 ] 127.0.0.1 /Blog/masterZeel/Index/BlogManage
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001981s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002145s ]
+
+[ 2013-08-23T15:36:36+08:00 ] 127.0.0.1 /Blog/masterZeel/Blog/blog
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001214s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001353s ]
+

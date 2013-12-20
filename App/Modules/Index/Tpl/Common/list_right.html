@@ -1,0 +1,19 @@
+<!--列表右侧-->
+		<div class='main-right'>
+		<dl>
+				
+				<foreach name='secondcate' item='v'>
+				<dt>
+					<a href="{:U('/c_'.$v['id'])}">{$v.html}{$v.name}</a>
+				</dt>
+				</foreach>	
+		</dl>
+		{:W('Hot')}
+			
+		{:W('New',array('limit'=>5))}
+
+		
+		
+	
+
+		</div>

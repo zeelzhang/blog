@@ -1,0 +1,40 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script type='text/javascript' src='__ROOT__/Public/js/jquery-1.8.2.min.js'></script>
+	<link href="__ROOT__/Public/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<script src="__ROOT__/Public/js/bootstrap.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+<form action="<?php echo U(GROUP_NAME.'/Linksmanage/linkaddhandle');?>" method="post">
+	<table class='table  table-hover' style="width:900px;" align="center">
+		<thead>
+			<tr>
+				<th colspan="2"><?php echo ($type); ?>作品链接</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+	
+			<tr>
+				<td>作品名称</td>
+				<td><input type="text" name="name" value="<?php echo ($data["wname"]); ?>" /></td>
+			</tr>
+			<tr>
+				<td>作品地址</td>
+				<td>
+				<input type="text" name="url" value="<?php echo ($data["wurl"]); ?>" />
+				<input type="hidden" name="type" value="<?php echo ($type); ?>" />
+				<input type="hidden" name="id" value="<?php echo ($data["id"]); ?>" />
+				</td>
+			</tr>
+			<th colspan="2"><input type="submit" value="保存<?php echo ($type); ?>" /></th>
+			
+		</tbody>
+	</table>
+</form>
+
+</body>
+</html>
